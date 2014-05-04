@@ -7,12 +7,12 @@
             {
                 "name": "for",
                 "description": "Iterate values",
-                "template": "for (${iteration_variable} in ${iterator}){${cursor}}\n"
+                "template": "for (${iteration_variable} in ${iterator})\n{\n${cursor}\n}\n"
             },
             {
                 "name": "for",
                 "description": "Iterate in range",
-                "template": "for (${iteration_variable} in 0...${iterator}.length){${cursor}}\n"
+                "template": "for (${iteration_variable} in 0...${iterator}.length)\n{\n${cursor}\n}\n"
             },
             {
                 "name": "var",
@@ -22,22 +22,32 @@
             {
                 "name": "function",
                 "description": "Function declaration",
-                "template": "function ${name}(${params}) {${cursor}}\n"
+                "template": "function ${name}(${params})\n{\n${cursor}\n}\n"
             },
             {
                 "name": "public function",
-                "description": "Public function declaration",
-                "template": "public function ${name}(${params}) \n{\n${cursor}\n}\n"
-            },
-            {
-                "name": "public static function",
-                "description": "Public static function declaration",
-                "template": "public static function ${name}(${params}) \n{\n${cursor}\n}\n"
+                "description": "public function",
+                "template": "public function ${name}(${params})\n{\n${cursor}\n}\n"
             },
             {
                 "name": "static function",
-                "description": "Static function declaration",
-                "template": "static function ${name}(${params}) \n{\n${cursor}\n}\n"
+                "description": "private static function",
+                "template": "static function ${name}(${params})\n{\n${cursor}\n}\n"
+            },
+            {
+                "name": "public static function",
+                "description": "public static function",
+                "template": "public static function ${name}(${params})\n{\n${cursor}\n}\n"
+            },
+            {
+                "name": "inline function",
+                "description": "inline function",
+                "template": "inline function ${name}(${params})\n{\n${cursor}\n}\n"
+            },
+            {
+                "name": "macro function",
+                "description": "macro function",
+                "template": "macro function ${name}(${params})\n{\n${cursor}\n}\n"
             }
         ]
         

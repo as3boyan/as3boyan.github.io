@@ -37,7 +37,7 @@
     </style>    
   </head>
   <body>
-    <h1>CodeMirror: XQuery Autocomplete demo</h1>
+    <h1>CodeMirror: Haxe Code Snippets based on CodeMirror: XQuery Autocomplete Demo(by Angelo Zerr)</h1>
 
     <form><textarea id="code" name="code">
 class Main
@@ -47,21 +47,9 @@ class Main
 </textarea>
 </form>
 
-<p>Press <strong>ctrl-space, ':', '$'</strong> to activate autocompletion for variables (let, variable, for, module) and functions (<strong>oauth2:, map:,xdmp:</strong>). See
-the code (<a href="../addon/hint/show-hint.js">here</a>
-and <a href="../addon/hint/xquery/xquery-hint.js">here</a>) to figure out
-how it works.</p>
+<p>Press <strong>ctrl-space</strong> to activate autocompletion for snippets.</p>
 
     <script>
-      
-      // completion for xdmp module
-      
-      
-      function passAndHint(cm) {
-     	setTimeout(function() {cm.execCommand("autocomplete");}, 100);
-      	return CodeMirror.Pass;
-      }
-          
       CodeMirror.commands.autocomplete = function(cm) {
         CodeMirror.showHint(cm, CodeMirror.xqueryHint);
       }
@@ -73,8 +61,6 @@ how it works.</p>
         matchBrackets: true,
 	    autoCloseBrackets: true,
         extraKeys: {
-            "':'": passAndHint,
-            "'$'": passAndHint,
             "Ctrl-Space": "autocomplete"
         }
       });
